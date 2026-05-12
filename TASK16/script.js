@@ -15,51 +15,12 @@ let inputbtn = document.createElement("button");
 
 inputbtn.innerText = "Click";
 search.appendChild(inputbtn);
-let searchAddress;
+let searchAddress = "";
 inputbtn.addEventListener("click", () => {
   // console.log("Clicked", input.value, "--");
   searchAddress = input.value;
   displayFunction();
 });
-/*
-if (searchAddress) {
-  data.map((element) => {
-    if (toLowerCase(element.address) == toLowerCase(searchAddress)) {
-      console.log(element);
-      console.log(element.name);
-      console.log(element.class);
-      let newnode = document.createElement("div");
-      newnode.innerHTML = `<div class="card">
-     <h2>${element.name}</h2>
-     <h3>Class:${element.class}</h3>
-     <h3>Marks:${element.marks}</h3>
-     <h3>Address:${element.address}</h3>
-     </div>
-     `;
-      main.appendChild(newnode);
-    } else {
-      console.log("No match found");
-      main.innerHTML = "<div>No Match Found</div>";
-    }
-  });
-} else {
-  data.map((element) => {
-    console.log(element);
-    console.log(element.name);
-    console.log(element.class);
-    let newnode = document.createElement("div");
-    newnode.innerHTML = `<div class="card">
-    <h2>${element.name}</h2>
-    <h3>Class:${element.class}</h3>
-    <h3>Marks:${element.marks}</h3>
-    <h3>Address:${element.address}</h3>
-    </div>
-    `;
-
-    main.appendChild(newnode);
-  });
-}
-*/
 
 const displayFunction = () => {
   if (searchAddress == "") {
@@ -82,7 +43,7 @@ const displayFunction = () => {
     let flag = false;
     main.innerHTML = "";
     data.map((element) => {
-      console.log(element.address, searchAddress);
+      // console.log(element.address, searchAddress);
       if (element.address == searchAddress) {
         flag = true;
         console.log(element);
@@ -98,9 +59,13 @@ const displayFunction = () => {
         `;
         main.appendChild(newnode);
       }
-      if (!flag) {
-        console.log("No match found....");
-      }
     });
+    if (!flag) {
+      console.log("No match found....");
+    }
   }
 };
+
+window.addEventListener("load", () => {
+  displayFunction();
+});
