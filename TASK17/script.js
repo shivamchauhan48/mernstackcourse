@@ -3,21 +3,25 @@ const innerFunction = (num1, num2) => {
     if (num2 == 0) {
       reject("Second Number is zero");
     } else {
-      console.log(num1 / num2);
+      //console.log(num1 / num2);
       resolve(num1 / num2);
     }
   });
   return result;
 };
 
-async function division() {
-  console.log("function division");
+const division = async (num1, num2) => {
+  console.log("function division called with numbers-", num1, num2);
   try {
-    let output = await innerFunction(50, 0);
+    let output = await innerFunction(num1, num2);
     console.log(output);
   } catch (err) {
     console.log(err);
   }
-}
+};
 
-division();
+division(50, 10);
+division(25, 0);
+division(10,10);
+division(30,2);
+division(0,0);
