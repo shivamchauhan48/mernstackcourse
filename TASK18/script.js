@@ -1,14 +1,30 @@
+let maindiv = document.createElement("div");
+let div1 = document.createElement("div");
+let div2 = document.createElement("div");
+let div3 = document.createElement("div");
+
+maindiv.id = "main";
+div1.id = "div1";
+div2.id = "div2";
+div3.id = "div3";
+
+document.body.appendChild(maindiv);
+maindiv.appendChild(div1);
+maindiv.appendChild(div2);
+maindiv.appendChild(div3);
+
 let head = document.createElement("header");
-head.classList.add("MainHeading");
+head.id="mainhead";
 head.innerHTML = " <h2>Hello</h2> ";
-document.body.appendChild(head);
+div1.appendChild(head);
 
 let boxSection = document.createElement("div");
 let userInputSection = document.createElement("div");
 
 boxSection.innerHTML =
   "<span class='borderBox' id='red'>Red</span> <span class='borderBox' id='blue'>Blue</span> <span class='borderBox' id='green'>Green</span> <span class='borderBox' id='yellow'>Yellow</span>";
-document.body.appendChild(boxSection);
+//document.body.appendChild(boxSection);
+div2.appendChild(boxSection);
 
 /*let spanselection = document.querySelectorAll("span");
 console.log(spanselection);
@@ -25,14 +41,16 @@ let boxgroup = document.getElementsByClassName("borderBox");
 
 //console.log([...boxgroup]);
 [...boxgroup].map((element) => {
- // console.log(element, element.textContent.toLowerCase());
+  // console.log(element, element.textContent.toLowerCase());
   element.addEventListener("click", () => {
     element.style.backgroundColor = element.textContent.toLowerCase();
   });
 });
 
 let inputdiv = document.createElement("div");
-document.body.appendChild(inputdiv);
+//document.body.appendChild(inputdiv);
+
+div3.appendChild(inputdiv);
 inputdiv.classList.add("inptdiv");
 
 let input = document.createElement("input");
@@ -44,4 +62,5 @@ inptsubmitbutton.addEventListener("click", () => {
   console.log("Clicked with value", input.value);
   head.innerHTML = `<h2>Hello, ${input.value}</h2>`;
 });
-document.body.appendChild(inptsubmitbutton);
+//document.body.appendChild(inptsubmitbutton);
+inputdiv.appendChild(inptsubmitbutton);
