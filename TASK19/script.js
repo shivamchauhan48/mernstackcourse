@@ -58,7 +58,9 @@ let userName = document.createElement("h3");
 userName.innerText = "userName";
 userdiv.appendChild(userName);
 let exitlogo = document.createElement("img");
-exitlogo.src = "";
+exitlogo.src =
+  "https://previews.123rf.com/images/usagar1/usagar11602/usagar1160200081/52547560-exit-button-isolated.jpg";
+exitlogo.style = "width: 20px;cursor: pointer";
 exitlogo.alt = "Exit Image not found";
 userdiv.appendChild(exitlogo);
 
@@ -111,8 +113,8 @@ inputSection.innerHTML = `<label for="id">Full Name</label>
     <input type="text" id="name">
     <label for="email">Email ID</label>
     <input type="text">
-    <label for="number">Phone Number</label>
-    <input type="number"></input>`;
+    <label for="pass">Password</label>
+    <input type="password" id="pass"></input>`;
 let booknowButton = document.createElement("button");
 booknowButton.innerText = "Book Now";
 booknowButton.disabled = true;

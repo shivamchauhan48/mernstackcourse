@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Javascript Mini Project</title>
+  </head>
+  <body>
+    <div id="main">
+      <nav>
+        <div id="navdiv" class="bodycenter">
+          <h2>Logo</h2>
+          <div>
+            <ul>
+              <li>Home</li>
+              <li>Services</li>
+              <li>About Us</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+          <button>Username</button>
+        </div>
+      </nav>
+      <div id="mainContent" class="bodycenter">
+        <div id="leftdiv"></div>
+        <div id="rightdiv"></div>
+      </div>
+      <div class="widthfull">
+        <div id="achievementSection" class="bodycenter">
+          <h1>Our Achievements</h1>
+          <div id="achievementList">
+            <div>
+              <h2>15+</h2>
+              <p>Laundry Services</p>
+            </div>
+            <div>
+              <h2>240+</h2>
+              <p>Happy Customers</p>
+            </div>
+            <div>
+              <h2>2+ Yrs</h2>
+              <p>Experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="bookservicesection" class="bodycenter">
+      <div id="bookleft">
+        <h2>Our Services</h2>
+        <p>Click On The Add To Cart Button To Add The Services To Your Cart</p>
+        <ul>
+          <li id="dry_clean">
+            <div>
+              <span class="servicename">Dry Cleaning</span> - $<span
+                class="serviceprice"
+                >200</span
+              >
+            </div>
+            <button class="buttonAfterServices">Add Item</button>
+          </li>
+          <li id="washfold">
+            <div>
+              <span class="servicename">Wash And Fold</span> - $<span
+                class="serviceprice"
+                >150</span
+              >
+            </div>
+            <button class="buttonAfterServices">Add Item</button>
+          </li>
+          <li id="ironing">
+            <div>
+              <span class="servicename">Ironing</span> - $<span
+                class="serviceprice"
+                >30</span
+              >
+            </div>
+            <button class="buttonAfterServices">Add Item</button>
+          </li>
+          <li id="stain_removal">
+            <div>
+              <span class="servicename">Stain Removal</span> - $<span
+                class="serviceprice"
+                >500</span
+              >
+            </div>
+            <button class="buttonAfterServices">Add Item</button>
+          </li>
+          <li id="leather_cleaning">
+            <div>
+              <span class="servicename">Leather and Suede Cleaning</span> -
+              $<span class="serviceprice">999</span>
+            </div>
+            <button class="buttonAfterServices">Add Item</button>
+          </li>
+          <li id="wed_dress_cleanup">
+            <div>
+              <span class="servicename">Wedding Dress Cleanup</span> - $<span
+                class="serviceprice"
+                >2800</span
+              >
+            </div>
+            <button class="buttonAfterServices">Add Item</button>
+          </li>
+        </ul>
+        <div><p>Add the items to the cart and book now.</p></div>
+      </div>
+      <div id="bookright">
+        <div id="topbookright">
+          <h3>Added items</h3>
+          <div id="tableinbookright">
+            <table id="tablediv">
+              <thead>
+                <tr>
+                  <th><strong>Name</strong></th>
+                  <th><strong>Price (in $)</strong></th>
+                </tr>
+              </thead>
+              <tbody id="tablebody"></tbody>
+            </table>
+          </div>
+          <div id="totalamountsection">
+            <div><h4>Total Amount</h4></div>
+            <div>$<span id="totalAmount">0</span></div>
+          </div>
+        </div>
+        <div id="bottombookright">
+          <h3>Book Now</h3>
+          <label for="inputFullName">Full Name</label>
+          <input type="text" id="inputFullName" />
+
+          <label for="inputEmail">Email ID</label>
+          <input type="text" id="inputEmail" />
+          <label for="inputPhone">Phone Number</label>
+          <input type="number" />
+
+          <button>Book Now</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
