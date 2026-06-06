@@ -1,19 +1,20 @@
 let leftdiv = document.getElementById("leftdiv");
 let heading1inleftdiv = document.createElement("h1");
 //heading1inleftdiv.textContent="Revitalize Your Clothes with Expert Laundry Services!";
-
+heading1inleftdiv.id = "headinginleftdiv";
 heading1inleftdiv.innerHTML =
-  "<h2>Revitalize Your Clothes with Expert <span> Laundry Services!</span></h2>";
+  "<h2>Revitalize Your Clothes with Expert <span>Laundry Services !</span></h2>";
 leftdiv.appendChild(heading1inleftdiv);
 
 let parainleftdiv = document.createElement("p");
+parainleftdiv.id = "parainleftdiv";
 parainleftdiv.textContent =
   "From premium dry cleaning to swift wash and fold, we deliver care and convenience. Schedule a pickup and rediscover the freshness of your clothes today!";
 leftdiv.appendChild(parainleftdiv);
 
 let bookbuttoninleftdiv = document.createElement("button");
 bookbuttoninleftdiv.textContent = "Book a service today";
-bookbuttoninleftdiv.style = "width:20vw;background:lightblue";
+bookbuttoninleftdiv.id = "bookbuttoninleftdiv";
 leftdiv.appendChild(bookbuttoninleftdiv);
 
 let rightdiv = document.getElementById("rightdiv");
@@ -33,11 +34,13 @@ const totalHandler = (task, cost, element) => {
     totalAmountValue = totalAmountValue + cost;
     totalAmount.textContent = totalAmountValue;
     element.textContent = "Remove Item";
+    element.classList.replace("add_item", "remove_item");
   }
   if (task == "remove") {
     totalAmountValue = totalAmountValue - cost;
     totalAmount.textContent = totalAmountValue;
     element.textContent = "Add Item";
+    element.classList.replace("remove_item", "add_item");
   }
 };
 
@@ -68,7 +71,7 @@ const removeHandler = (arg1, arg2, element) => {
   rowToBeDeleted.remove();
 };
 
-let buttoncollection = document.getElementsByClassName("buttonAfterServices");
+let buttoncollection = document.getElementsByClassName("add_item");
 //console.log(buttoncollection);
 
 let buttonarray = [...buttoncollection];
@@ -86,6 +89,7 @@ buttonarray.map((element) => {
         element.parentElement.querySelector(".serviceprice").textContent,
       ),
     );*/
+    setbook = false;
     let name = element.parentElement.querySelector(".servicename").textContent;
     let price = parseInt(
       element.parentElement.querySelector(".serviceprice").textContent,
@@ -99,3 +103,5 @@ buttonarray.map((element) => {
     }
   });
 });
+
+let setbook = false;

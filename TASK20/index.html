@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <script src="email.js" defer></script>
     <title>Javascript Mini Project</title>
   </head>
   <body>
@@ -49,63 +50,62 @@
     </div>
     <div id="bookservicesection" class="bodycenter">
       <div id="bookleft">
-        <h2>Our Services</h2>
-        <p>Click On The Add To Cart Button To Add The Services To Your Cart</p>
+        <div>
+          <h2>Our Services</h2>
+          <p>
+            Click On The Add To Cart Button To Add The Services To Your Cart
+          </p>
+        </div>
         <ul>
+          <li>Name of Service - (Price in ₹)</li>
           <li id="dry_clean">
             <div>
-              <span class="servicename">Dry Cleaning</span> - $<span
-                class="serviceprice"
-                >200</span
-              >
+              <span class="servicename">Dry Cleaning</span> -
+              <span class="serviceprice">200</span>
             </div>
-            <button class="buttonAfterServices">Add Item</button>
+            <button class="buttonAfterServices add_item">Add Item</button>
           </li>
           <li id="washfold">
             <div>
-              <span class="servicename">Wash And Fold</span> - $<span
-                class="serviceprice"
-                >150</span
-              >
+              <span class="servicename">Wash And Fold</span> -
+              <span class="serviceprice">150</span>
             </div>
-            <button class="buttonAfterServices">Add Item</button>
+            <button class="buttonAfterServices add_item">Add Item</button>
           </li>
           <li id="ironing">
             <div>
-              <span class="servicename">Ironing</span> - $<span
-                class="serviceprice"
-                >30</span
-              >
+              <span class="servicename">Ironing</span> -
+              <span class="serviceprice">30</span>
             </div>
-            <button class="buttonAfterServices">Add Item</button>
+            <button class="buttonAfterServices add_item">Add Item</button>
           </li>
           <li id="stain_removal">
             <div>
-              <span class="servicename">Stain Removal</span> - $<span
-                class="serviceprice"
-                >500</span
-              >
+              <span class="servicename">Stain Removal</span> -
+              <span class="serviceprice">500</span>
             </div>
-            <button class="buttonAfterServices">Add Item</button>
+            <button class="buttonAfterServices add_item">Add Item</button>
           </li>
           <li id="leather_cleaning">
             <div>
               <span class="servicename">Leather and Suede Cleaning</span> -
-              $<span class="serviceprice">999</span>
+              <span class="serviceprice">999</span>
             </div>
-            <button class="buttonAfterServices">Add Item</button>
+            <button class="buttonAfterServices add_item">Add Item</button>
           </li>
           <li id="wed_dress_cleanup">
             <div>
-              <span class="servicename">Wedding Dress Cleanup</span> - $<span
-                class="serviceprice"
-                >2800</span
-              >
+              <span class="servicename">Wedding Dress Cleanup</span> -
+              <span class="serviceprice">2800</span>
             </div>
-            <button class="buttonAfterServices">Add Item</button>
+            <button class="buttonAfterServices add_item">Add Item</button>
           </li>
         </ul>
-        <div><p>Add the items to the cart and book now.</p></div>
+        <div>
+          <p style="color: rgb(39, 120, 251)">
+            Add the items to the cart and book now.
+          </p>
+        </div>
       </div>
       <div id="bookright">
         <div id="topbookright">
@@ -115,7 +115,7 @@
               <thead>
                 <tr>
                   <th><strong>Name</strong></th>
-                  <th><strong>Price (in $)</strong></th>
+                  <th><strong>Price (in ₹)</strong></th>
                 </tr>
               </thead>
               <tbody id="tablebody"></tbody>
@@ -123,22 +123,133 @@
           </div>
           <div id="totalamountsection">
             <div><h4>Total Amount</h4></div>
-            <div>$<span id="totalAmount">0</span></div>
+            <div>₹ <span id="totalAmount">0</span></div>
           </div>
         </div>
         <div id="bottombookright">
           <h3>Book Now</h3>
-          <label for="inputFullName">Full Name</label>
-          <input type="text" id="inputFullName" />
+          <form id="bookserviceForm">
+            <label for="inputFullName">Full Name</label>
+            <input type="text" id="inputFullName" required />
 
-          <label for="inputEmail">Email ID</label>
-          <input type="text" id="inputEmail" />
-          <label for="inputPhone">Phone Number</label>
-          <input type="number" />
+            <label for="inputEmail">Email ID</label>
+            <input type="text" id="inputEmail" required />
+            <label for="inputPhone">Phone Number</label>
+            <input type="number" id="inputPhone" required />
 
-          <button>Book Now</button>
+            <button type="submit" id="bookNowButton">Book Now</button>
+          </form>
+          <p id="lineafterbook" style="display: none">
+            Thank you For Booking the Service We will get back to you soon!
+          </p>
         </div>
       </div>
+    </div>
+    <div id="lastpart">
+      <div style="background-color: white; padding: 20px 0px">
+        <div class="bodycenter" id="qualitySection">
+          <div>
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/035/112/440/small/premium-service-golden-round-label-with-rating-stars-shiny-glossy-luxury-modern-flat-style-for-icon-logo-seal-tag-sign-seal-symbol-badge-stamp-sticker-etc-free-vector.jpg"
+              alt=""
+            />
+            <h2>Premium Services</h2>
+            <p>
+              Elevate your wardrobe with our meticulour dry cleaning, ensuring
+              garments look and feel as good as new.
+            </p>
+          </div>
+          <div>
+            <img
+              src="https://dcassetcdn.com/design_img/2519833/638649/638649_13522124_2519833_8e5c1390_image.jpg"
+              alt=""
+            />
+            <h2>Quick Support</h2>
+            <p>
+              We are committed to providing prompt solutions to ensure your
+              experience is smooth and worry-free.
+            </p>
+          </div>
+          <div>
+            <img
+              src="https://www.shutterstock.com/image-illustration/hassle-free-text-on-blue-260nw-1974699497.jpg"
+              alt=""
+            />
+            <h2>Hassle Free Delivery</h2>
+            <p>
+              Enjoy seamless service with our convenient pickup and delivery
+              options, tailored to your schedule.
+            </p>
+          </div>
+          <div>
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/023/110/603/small_2x/affordable-prices-rubber-stamp-seal-vector.jpg"
+              alt=""
+            />
+            <h2>Affordable Prices</h2>
+            <p>
+              Experience exceptional care without breaking the bank - our
+              affordable prices make laundry day stress-free.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="newsletterDiv" class="widthfull">
+        <div class="bodycenter" id="newsletterInnerDiv">
+          <h1>Subscribe to our newsletter.</h1>
+          <div>
+            <form id="newsletterForm">
+              <input type="text" id="newsletterName" placeholder="Full Name" required/>
+              <input type="text" id="newsletterEmail" placeholder="Email" required />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div id="footerdiv" class="bodycenter">
+          <div>
+            <h1>Logo</h1>
+            <h3>About Us</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div>
+            <h3>Important Links</h3>
+            <ul>
+              <li><a href=""> About Us</a></li>
+              <li><a href=""> Contact Us</a></li>
+              <li><a href=""> Privacy Policy</a></li>
+              <li><a href=""> Terms of Use</a></li>
+              <li><a href=""> Refund Policy</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Contact</h3>
+            <ul>
+              <li>mail@site.com</li>
+              <li>+91 9798962343</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Follow Us</h3>
+            <div id="socialLogos">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1280px-Instagram_logo_2016.svg.png"
+                alt="Instagram"
+              /><img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/250px-Facebook_icon_2013.svg.png"
+                alt="Facebook"
+              /><img
+                src="https://images.seeklogo.com/logo-png/49/2/twitter-x-logo-png_seeklogo-492396.png"
+                alt="X"
+              /><img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/3840px-YouTube_full-color_icon_%282017%29.svg.png"
+                alt="Youtube"
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
