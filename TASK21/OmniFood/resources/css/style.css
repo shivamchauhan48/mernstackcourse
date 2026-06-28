@@ -1,0 +1,515 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@140&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+.bodycenter {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}
+#header {
+  color: white;
+  min-height: 100vh;
+  /* width: 100vw; */
+  background-image: url("../img/2150310720\ \(1\).jpg");
+  background-size: cover;
+  /* border: 0.5px solid yellow; */
+  padding-top: 5px;
+}
+
+#navbar {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: larger;
+  position: relative;
+}
+
+#menu-btn {
+  display: none;
+}
+
+#logo {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo img {
+  width: 80px;
+}
+#navbar nav {
+  margin-left: auto;
+}
+
+#navbar nav ul {
+  display: flex;
+
+  list-style-type: none;
+  gap: 20px;
+}
+
+#navbar nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding-bottom: 5px;
+}
+
+#navbar nav ul li a:hover {
+  border-bottom: 1px solid rgb(237, 105, 28);
+  opacity: 80%;
+}
+
+#herosection {
+  height: 80%;
+  /* position: fixed;
+  left: 15%;
+  top: 50%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: first baseline;
+  /* border: 0.5px solid aqua; */
+}
+
+#herosection h1 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+#herobuttondiv {
+  margin-top: 10px;
+}
+
+#herobuttondiv button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#herobuttondiv button:nth-of-type(1) {
+  background-color: rgb(237, 105, 28);
+  color: white;
+}
+
+#herobuttondiv button:nth-of-type(1):hover {
+  opacity: 80%;
+}
+
+#herobuttondiv button:nth-of-type(2) {
+  background: transparent;
+  /* border: 0.5px solid rgb(237, 105, 28); */
+  color: rgb(237, 105, 28);
+  font-weight: 200;
+}
+
+#herobuttondiv button:nth-of-type(2):hover {
+  background-color: rgb(220, 99, 30);
+  color: white;
+  transition: background-color 0.2s ease-out;
+}
+
+@media (max-width: 800px) {
+  #navbar nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    width: 220px;
+    background: rgba(0, 0, 0, 0.9);
+
+    display: none;
+    flex-direction: column;
+
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  #navbar nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #menu-btn {
+    display: block;
+  }
+
+  #navbar nav.active {
+    display: flex;
+  }
+  #logo img {
+    width: 60px;
+  }
+  #herosection h1 {
+    font-size: 2rem;
+  }
+
+  #herobuttondiv {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+#howsection {
+  background-color: rgb(246, 243, 243);
+  min-height: 100vh;
+  /* border: 0.5px solid red; */
+}
+
+#howheadsection {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.headunderline {
+  width: 150px;
+  border-bottom: 2.2px solid rgb(220, 99, 30);
+}
+/*
+#howsection div:nth-of-type(1) {
+  display: flex;
+  border: 2px solid green;
+}
+*/
+#howsectionmain {
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* border: 0.5px solid violet; */
+}
+/*
+#howsection div:nth-of-type(1) {
+  width: 80%;
+}*/
+
+#howleftsection {
+  width: 35%;
+  height: 100%;
+  /* border: 0.5px solid orange; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#howleftsection img {
+  /* height: 90%;
+  width: 80%; */
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+}
+
+#howrightsection {
+  /* border: 0.5px solid green; */
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#howrightsection div:nth-of-type(1) {
+  /* border: 0.5px solid black; */
+  width: 90%;
+  font-size: x-large;
+  font-weight: 800;
+}
+
+#howrightsection ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#howrightsection ol li {
+  list-style-position: inside;
+  /* background-color: rgb(220, 99, 30); */
+}
+
+#storebuttondiv {
+  margin-top: 20px;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+}
+
+#storebuttondiv button {
+  border: none;
+  margin-right: 10px;
+}
+
+#storebuttondiv img {
+  height: 60px;
+
+  /* border: 0.5px solid blue; */
+}
+
+@media (max-width: 800px) {
+  #storebuttondiv {
+    border: 0.5px solid blue;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+  }
+  #storebuttondiv img {
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  #howsectionmain {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #howleftsection,
+  #howrightsection {
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+  }
+  #storebuttondiv {
+    width: 30%;
+  }
+
+  #storebuttondiv img {
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+#citysection {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#cityheadsection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#citycardsection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  align-items: center;
+}
+
+/* #cityheadsection h1 {
+  border-bottom: 1.5px solid rgb(220, 99, 30);
+} */
+
+/* #citycardsection {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+} */
+
+#citycardsection ul li {
+  list-style: none;
+}
+
+#citycardsection ul img {
+  width: 15px;
+}
+
+.citycard > img {
+  width: 230px;
+  height: 200px;
+}
+
+.citycard a {
+  color: orange;
+}
+
+#customerreviewsection {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(40, 40, 40, 0.6), rgba(24, 24, 24, 0.6)),
+    url(../img/background-baked-cheese-circle.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: white;
+}
+
+#reviewheading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border-bottom: 0.5px solid orange; */
+}
+
+#reviews {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* border: 0.5px solid red; */
+  height: 60%;
+  font-weight: bold;
+}
+
+/* #reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+} */
+
+.reviewcard {
+  width: 30%;
+}
+
+.reviewcard h1 {
+  font-size: xx-large;
+}
+.authordiv {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.reviewcard img {
+  border-radius: 15px;
+  width: 15%;
+  height: 50px;
+}
+
+@media (max-screen: 800px) {
+  #reviews {
+    flex-direction: column;
+  }
+  .reviewcard {
+    width: 100%;
+  }
+}
+
+#pricingsection {
+  min-height: 100vh;
+  background-color: rgb(246, 244, 244);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#pricingheading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#pricingcardssection {
+  /* border: 0.5px solid blue; */
+  display: flex;
+  height: 60%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.pricingcard {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  height: 100%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+.pricingcard h1 {
+  color: orange;
+  font-weight: lighter;
+}
+.pricingcard ul {
+  list-style-position: inside;
+  list-style: none;
+}
+
+.pricingcard ul li span {
+  color: orange;
+}
+
+.pricingcard button {
+  width: 25%;
+  margin: 0 auto;
+  padding: 7px 5px;
+  border-radius: 5px;
+  border: none;
+  border: 0.5px solid orange;
+  background-color: white;
+  cursor: pointer;
+  color: orange;
+}
+
+.pricingcard button:hover {
+  background-color: orange;
+  color: white;
+}
+
+@media (max-width: 800px) {
+  #pricingcardssection {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .pricingcard {
+    width: 100%;
+  }
+}
+
+#footer {
+  height: 28vh;
+  background-color: rgb(37, 25, 21);
+  /* background-color: lightblue; */
+  color: white;
+  font-weight: bold;
+}
+
+#footertop {
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footertop a {
+  text-decoration: none;
+  color: white;
+}
+
+#anchorsection {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+#footertop img {
+  width: 20px;
+}
+#copyrightsection {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  #footertop {
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+  }
+}
