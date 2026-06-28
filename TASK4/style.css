@@ -1,32 +1,33 @@
- *{
-    margin: 0px;
-    box-sizing: border-box;
-
-}
-body{
-   background-color: lightseagreen;
-   
-   height: 100vh;
-   border: 0.5px solid blue;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-div{
-    width:50%;
-    height: 50%;
-    margin: auto;
-    margin-top: 150px;
-    box-sizing: border-box;
-    border: 1px solid red;
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 10vh 0px;
+}
+.container {
+  width: 50%;
+  height: 80vh;
+  margin: 0 auto;
 }
 
-img{
-    margin-top: 100px;
-    height: 50%;
-    width: 100%;
+.container img {
+  width: 100%;
+  height: 95%;
+  display: block;
 }
-button{
-    width: 100%;
-    height: 40px;
-    border-radius: 15px;
-    background-color: lightgoldenrodyellow;
-} 
+
+.container button {
+  background: linear-gradient(90deg, #4f46e5, #7c3aed, #ec4899);
+  border: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  height: 5%;
+  margin: 0;
+}
