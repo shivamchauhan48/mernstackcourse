@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: rgb(150, 47, 246);
+}
+
+#main {
+  height: 200vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#main h2 {
+  margin: 30px 0px;
+}
+#cardsection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.card {
+  padding: 10px;
+  border: 5px solid transparent; /* 1. Set border width and style */
+  border-image: linear-gradient(to right, #ff7e5f, #4211b6) 1;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.card img {
+  width: 90%;
+  height: 200px;
+  margin-bottom: 15px;
+}
