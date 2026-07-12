@@ -1,6 +1,7 @@
 import React from "react";
 import useFetch from "./useFetch";
-
+import Card from "./Card";
+import "./App.css";
 const App = () => {
   let { data: fetchdata, loading, error } = useFetch();
   console.log(fetchdata, loading, error);
@@ -21,12 +22,22 @@ const App = () => {
   }
   return (
     <>
-      <h2>Fetched data :</h2>
-      <ul>
-        {fetchdata.map((element) => {
-          return <li key={element.id}>{element.name}</li>;
-        })}
-      </ul>
+      <div id="main">
+        <h2>Fetched data :</h2>
+        <ul>
+          {fetchdata.map((element) => {
+            return (
+              <li key={element.id}>
+                <Card
+                  name={element.name}
+                  id={element.id}
+                  mail={element.email}
+                />
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </>
   );
 };

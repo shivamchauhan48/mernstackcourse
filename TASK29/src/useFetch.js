@@ -6,30 +6,29 @@ const useFetch = () => {
   let [loading, setloading] = useState(false);
   let [error, seterror] = useState(null);
 
-  useEffect(() => {
-    const fetchHandler = async () => {
-      try {
-        setloading(true);
-        let response = await fetch(
-          "https://jsonplaceholder.typicode.com/users",
-        );
-        console.log(response.ok);
-        if (!response.ok) {
-          throw new Error("Some error while fetching....");
-        }
-        let final = await response.json();
-        console.log(final);
-        setdata((prev) => {
-          return final;
-        });
-        // setdata(final);
-      } catch (error) {
-        seterror(error.message);
-        console.log(error);
-      } finally {
-        setloading(false);
+  const fetchHandler = async () => {
+    try {
+      setloading(true);
+      let response = await fetch("https://jsonplaceholder.typicode.com/users");
+      console.log(response.ok);
+      if (!response.ok) {
+        throw new Error("Some error while fetching....");
       }
-    };
+      let final = await response.json();
+      console.log(final);
+      setdata((prev) => {
+        return final;
+      });
+      // setdata(final);
+    } catch (error) {
+      seterror(error.message);
+      console.log(error);
+    } finally {
+      setloading(false);
+    }
+  };  
+
+  useEffect(() => {
     fetchHandler();
   }, []);
 
