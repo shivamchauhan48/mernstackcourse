@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useFetch = () => {
+const useFetch = (url) => {
   console.log("Custom Hook Called");
   let [data, setdata] = useState([]);
   let [loading, setloading] = useState(false);
@@ -9,7 +9,7 @@ const useFetch = () => {
   const fetchHandler = async () => {
     try {
       setloading(true);
-      let response = await fetch("https://jsonplaceholder.typicode.com/users");
+      let response = await fetch(url);
       console.log(response.ok);
       if (!response.ok) {
         throw new Error("Some error while fetching....");
@@ -26,11 +26,11 @@ const useFetch = () => {
     } finally {
       setloading(false);
     }
-  };  
+  };
 
   useEffect(() => {
     fetchHandler();
-  }, []);
+  }, [url]);
 
   return { data, loading, error };
 };

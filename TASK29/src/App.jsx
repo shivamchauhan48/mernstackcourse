@@ -3,7 +3,7 @@ import useFetch from "./useFetch";
 import Card from "./Card";
 import "./App.css";
 const App = () => {
-  let { data: fetchdata, loading, error } = useFetch();
+  let { data: fetchdata, loading, error } = useFetch("https://jsonplaceholder.typicode.com/users");
   console.log(fetchdata, loading, error);
   if (loading) {
     return (
