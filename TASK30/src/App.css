@@ -1,0 +1,243 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+#navbar img {
+  width: 60px;
+}
+
+#navbar ul {
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+  margin-right: 20px;
+}
+#navbar a {
+  text-decoration: none;
+  font-weight: bolder;
+}
+#navbar ul li a{
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px;
+    border-radius: 7px;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+
+
+.mainbox {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f5f8fc;
+}
+
+.mainbox h1 {
+  font-size: 2.5rem;
+  color: #0d6efd;
+  margin-bottom: 10px;
+}
+
+.mainbox p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.mainbox div {
+  width: 40%;
+  min-width: 320px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 25px;
+}
+
+.mainbox label {
+  font-weight: 600;
+}
+
+.mainbox input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.mainbox input:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 6px rgba(13, 110, 253, 0.3);
+}
+
+.mainbox button {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #0d6efd;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mainbox button:hover {
+  background: #0b5ed7;
+}
+
+.mainbox small {
+  text-align: center;
+  color: #666;
+}
+
+.mainbox a {
+  text-decoration: none;
+  color: #0d6efd;
+  font-weight: bold;
+}
+
+.mainbox a:hover {
+  text-decoration: underline;
+}
+
+#dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 30vh;
+  grid-template-areas:
+    "card1 card2"
+    "card3 card2"
+    "card4 card4";
+
+  gap: 20px;
+  padding: 20px;
+}
+
+#dashboard div {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#dashboard img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#dashboard h1 {
+  font-size: 3rem;
+  color: #0d6efd;
+  margin: 10px 0;
+}
+
+#dashboard h2 {
+  margin-bottom: 10px;
+}
+
+#dashboard p {
+  color: #555;
+  line-height: 1.5;
+}
+
+#dashboard ul {
+  padding-left: 20px;
+}
+
+#dashboard li {
+  margin: 10px 0;
+}
+
+#dashboard button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #0d6efd;
+  color: white;
+  cursor: pointer;
+}
+
+#dashboard button:hover {
+  background: #0b5ed7;
+}
+
+#home {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "cardA cardB"
+    "cardA cardC";
+
+  gap: 20px;
+  padding: 30px;
+}
+
+#home div {
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+}
+
+#home img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#home h1,
+#home h2 {
+  margin: 15px 0 10px;
+}
+
+#home p {
+  line-height: 1.6;
+  color: #555;
+}
+
+#home ul {
+  padding-left: 20px;
+}
+
+#home li {
+  margin: 12px 0;
+}
+
+#home button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#home button:hover {
+  background: #0b5ed7;
+}
