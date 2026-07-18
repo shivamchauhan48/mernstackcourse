@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: black;
+}
+nav {
+  width: 100%;
+  height: 10vh;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+#logo {
+  width: 10%;
+  text-align: center;
+}
+
+#navlist {
+  width: 79%;
+  text-align: center;
+}
+
+#navlist ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#username {
+  width: 10%;
+  text-align: center;
+}
+
+#username button {
+  font-weight: 600;
+
+  padding: 15px 10px;
+  background: rgb(165, 179, 213);
+  color: rgb(69, 17, 182);
+  border: none;
+  border-radius: 8px;
+}
+
+#hero {
+  height: 90vh;
+  width: 100%;
+  padding: 40px 5%;
+  font-size: 1.5rem;
+}
+
+#heroleft {
+  width: 48%;
+  display: inline-block;
+  vertical-align: middle;
+}
+#heroleft span {
+  color: #459ce8;
+}
+#heroleft h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+#heroleft p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+#heroleft button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  transition: transform 0.3s ease;
+}
+#heroleft button:hover {
+  transform: scale(1.5) rotate(5deg);
+}
+
+#heroright {
+  width: 48%;
+  text-align: right;
+  display: inline-block;
+  vertical-align: middle;
+}
+#heroright img {
+  width: 90%;
+  height: 80vh;
+}
+
+@media (max-width: 768px) {
+  nav {
+    font-size: 0.8rem;
+  }
+
+  #hero {
+    font-size: 1rem;
+  }
+  #heroleft h1 {
+    font-size: 40px;
+  }
+  #heroleft p {
+    font-size: 0.5rem;
+  }
+  #heroleft button {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 425px) {
+  nav {
+    position: relative;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  #logo {
+    width: auto;
+  }
+
+  #username {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  #navlist {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #navlist ul li {
+    display: block;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  #hero {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  #heroleft,
+  #heroright {
+    width: 100%;
+  }
+
+  #heroright img {
+    width: 100%;
+    height: auto;
+  }
+  #menu-toggle:checked + .hamburger + #navlist {
+    display: block;
+  }
+}
