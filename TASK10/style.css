@@ -96,22 +96,31 @@ nav {
   display: inline-block;
   vertical-align: middle;
 }
-
-@keyframes floatAndTilt {
+@keyframes orbitScale {
   0% {
-    transform: translateY(0px) rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
   }
+
+  25% {
+    transform: rotate(5deg) scale(1.05);
+  }
+
   50% {
-    transform: translateY(-10px) rotate(3deg) scale(1.05); /* Moves up, tilts, and grows */
+    transform: rotate(0deg) scale(1);
   }
+
+  75% {
+    transform: rotate(5deg) scale(1.05);
+  }
+
   100% {
-    transform: translateY(0px) rotate(0deg) scale(1); /* Loops smoothly back to start */
+    transform: rotate(0deg) scale(1);
   }
 }
 #heroright img {
   width: 90%;
   height: 80vh;
-  animation: floatAndTilt 4s ease-in-out infinite;
+  animation: orbitScale 2s linear infinite;
 }
 
 @media (max-width: 768px) {
